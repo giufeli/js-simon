@@ -29,7 +29,7 @@ buttonStart.addEventListener('click', function() {
     let counter = 6;
     const idInterval = setInterval(count, 1000);
     function count() {
-        if (counter === 0) {
+        if (counter === 1 ) {
             boxNumber.classList.add('hidden');
             boxTimer.classList.add('hidden')
             clearInterval(idInterval);
@@ -40,20 +40,21 @@ buttonStart.addEventListener('click', function() {
                     memory = Number(prompt('Inserisci i numeri che hai memorizzato'))
                     arrResult.push(memory);
 
-                    conteggio = 0
+                    let conteggio = 0
                     if(arrRandoms.includes(memory)){                     
-                        conteggio+= 1
+                        conteggio++
                         console.log(conteggio)
                     }                           
                 }  
-                /*
+                
                 boxResult.classList.remove('hidden');
                 const eleResult = document.createElement('div')           
                 boxResult.append(eleResult)
                 eleResult.innerHTML = `Hai memorizzato ${conteggio} numeri su 5`            
                 console.log(arrResult)
-                */
+                
             }, 200)
+            
         } else {          
             counter--;
             const eleTimer = document.createElement('div')           
