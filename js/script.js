@@ -35,23 +35,25 @@ buttonStart.addEventListener('click', function() {
             clearInterval(idInterval);
 
             setTimeout(function () {
+                let conteggio = 0
                 const arrResult = [];
                 for (let i = 1; i <= 5; i++){
                     memory = Number(prompt('Inserisci i numeri che hai memorizzato'))
                     arrResult.push(memory);
-
-                    let conteggio = 0
                     if(arrRandoms.includes(memory)){                     
                         conteggio++
-                        console.log(conteggio)
-                    }                           
-                }  
-                
+                        console.log(conteggio)                       
+                    }    
+                }                                           
                 boxResult.classList.remove('hidden');
                 const eleResult = document.createElement('div')           
                 boxResult.append(eleResult)
                 eleResult.innerHTML = `Hai memorizzato ${conteggio} numeri su 5`            
                 console.log(arrResult)
+
+                //if(conteggio >1){
+                //    eleResult.innerHTML = `Hai memorizzato i numeri ${arrResult} ossia ${conteggio} numeri su 5`       
+                //}
                 
             }, 200)
             
