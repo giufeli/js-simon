@@ -80,6 +80,8 @@
     border-radius: 7px;
     padding: 5px;
     transition: all .4s;
+    color: black;
+    background-color: white;
 }
 
 .start:hover{
