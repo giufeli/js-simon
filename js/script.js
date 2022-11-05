@@ -26,7 +26,7 @@ buttonStart.addEventListener('click', function() {
         };
     console.log(arrRandoms)   
 
-    let counter = 6;
+    let counter = 30;
     const idInterval = setInterval(count, 1000);
     const eleTimer = document.createElement('div')           
     boxTimer.append(eleTimer)   
